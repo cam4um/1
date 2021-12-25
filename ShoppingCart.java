@@ -4,6 +4,18 @@ import java.text.*;
 * Containing items and calculating price.
 */
 public class ShoppingCart {
+	
+	  
+    private String title;
+    private double price;
+    private int quantity;
+    private ItemType type;
+    
+   
+    private List<Item> items = new ArrayList<Item>();
+	
+	
+	
     public static enum ItemType { NEW, REGULAR, SECOND_FREE, SALE };
     /**
      * Tests all class methods.
@@ -178,13 +190,5 @@ public class ShoppingCart {
         }
         return discount;
     }
-    /** item info */
-    private static class Item{
-        String title;
-        double price;
-        int quantity;
-        ItemType type;
-    }
-    /** Container for added items */
-    private List<Item> items = new ArrayList<Item>();
+
 }
