@@ -1,4 +1,4 @@
-import java.util.*;
+zimport java.util.*;
 import java.text.*;
 /**
 * Containing items and calculating price.
@@ -46,7 +46,7 @@ public class ShoppingCart {
             throw new IllegalArgumentException("Illegal price");
         if (quantity <= 0)
             throw new IllegalArgumentException("Illegal quantity");
-        Item item = new Item();
+         ShoppingCart item = new ShoppingCart();
         item.title = title;
         item.price = price;
         item.quantity = quantity;
@@ -79,7 +79,7 @@ public class ShoppingCart {
         // formatting each line
         double total = 0.00;
         int index = 0;
-        for (Item item : items) {
+        for (ShoppingCart item : items) {
             int discount = calculateDiscount(item.type, item.quantity);
             double itemTotal = item.price * item.quantity * (100.00 - discount) / 100.00;
             lines.add(new String[]{
